@@ -1,0 +1,30 @@
+auth:
+  provider: none
+components:
+  auto_discovery:
+    enabled: true
+    ignore_patterns:
+    - __pycache__
+    - '*.pyc'
+    - __init__.py
+    scan_directories:
+    - tools
+    - resources
+    - prompts
+  prompts: []
+  resources: []
+  tools: []
+management:
+  expose_management_tools: true
+mcpServers: {}
+middleware: []
+server:
+  instructions: This is devops-mcp-server - Universal DevOps MCP Server - Deploy,
+    monitor, and manage applications through conversation. Supports Docker, Kubernetes,
+    and multiple cloud platforms.
+  name: devops-mcp-server
+transport:
+  host: localhost
+  log_level: INFO
+  port: 8000
+  transport: stdio
