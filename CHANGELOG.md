@@ -1,29 +1,35 @@
 # Changelog
 
-All notable changes to this MCP server will be documented in this file.
+All notable changes to devops-mcp-server will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.1.0] - 2025-10-13
 
-# # [Unreleased]
+### 🎉 Initial Release
 
-# ## Added
-- Initial MCP server implementation
+#### 🐳 Docker Support (12 tools)
+- **Docker Compose Management**
+  - Start/stop services with `docker_compose_up` and `docker_compose_down`
+  - View logs with `docker_compose_logs`
+  - Check service status with `docker_compose_ps`
+  - Restart services with `docker_compose_restart`
 
-# ## Changed
+- **Container Management**
+  - List containers with `docker_ps`
+  - View container logs with `docker_logs`
+  - Start/stop/restart containers
+  - Inspect container details with `docker_inspect`
+  - Monitor resource usage with `docker_stats`
 
-# ## Deprecated
+#### 📊 Process Monitoring (3 tools)
+- Check service status by name
+- Get system information (memory, disk, uptime)
+- List ports in use
 
-# ## Removed
+#### ✨ Features
+- Natural language interaction through MCP protocol
+- Auto-discovery of tools from project structure
+- Complete documentation and usage examples
+- Docker deployment ready (Dockerfile + docker-compose.yml)
+- Production-ready error handling
 
-# ## Fixed
-
-# ## Security
-
-# # [1.0.0] - 2025-10-13
-
-# ## Added
-- Initial release
-- Basic server configuration
-- Core MCP functionality
-- Tools, resources, and prompts modules
+**Total: 15 DevOps tools**

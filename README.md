@@ -1,6 +1,44 @@
-# devops-mcp-server
+# 🚀 DevOps MCP Server
 
-MCP server: devops-mcp-server
+Universal DevOps automation through conversation. Deploy, monitor, and manage applications using natural language with AI assistants.
+
+## ✨ Features
+
+### 🐳 Docker & Docker Compose
+- **Container Management** - Start, stop, restart, and monitor containers
+- **Compose Operations** - Manage multi-container applications  
+- **Log Viewing** - Stream and search container logs
+- **Resource Monitoring** - Track CPU, memory, and network usage
+
+### 📊 Process Monitoring
+- **Service Status** - Check if services are running
+- **System Info** - View memory, disk, and CPU usage
+- **Port Management** - List and check port usage
+
+### 🎯 Available Tools
+
+#### Docker Compose (5 tools)
+- `docker_compose_up` - Start services
+- `docker_compose_down` - Stop and remove services
+- `docker_compose_logs` - View service logs
+- `docker_compose_ps` - List service status
+- `docker_compose_restart` - Restart services
+
+#### Docker Containers (7 tools)
+- `docker_ps` - List containers
+- `docker_logs` - View container logs
+- `docker_start` - Start a container
+- `docker_stop` - Stop a container
+- `docker_restart` - Restart a container
+- `docker_inspect` - Get container details
+- `docker_stats` - View resource usage
+
+#### Process Monitoring (3 tools)
+- `check_service_status` - Check if a service is running
+- `get_system_info` - Get system information
+- `list_ports_in_use` - List ports in use
+
+**Total: 15 DevOps tools ready to use!**
 
 ## Quick Start
 
@@ -47,16 +85,40 @@ devops-mcp-server/
 └── prompts/             # Prompt template directory
 ```
 
-## Development
+## 💬 Usage Examples
 
-Edit `server.py` to add your functionality:
+Once connected to Claude Desktop or another MCP client, you can interact naturally:
 
-```python
-@server.tool()
-def my_tool(arg: str) -> str:
-    """Tool description"""
-    return f"Result: {{arg}}"
+**Container Management:**
+- "Start my docker compose services"
+- "Show me the logs for my-app container"
+- "What containers are currently running?"
+- "Restart the database container"
+
+**Monitoring:**
+- "Is nginx running?"
+- "What's using port 8080?"
+- "Show me system resource usage"
+
+**Docker Compose:**
+- "Bring up my application stack"
+- "Show me the status of all services"
+- "View the logs for the web service"
+
+## 🛠️ Development
+
+The server automatically discovers tools from the `tools/` directory structure:
+
 ```
+tools/
+├── docker/
+│   ├── compose.py      # Docker Compose tools
+│   └── container.py    # Container management tools
+└── process/
+    └── monitor.py      # Process monitoring tools
+```
+
+To add new tools, create Python files in the appropriate directory with functions decorated with `@tool()`
 
 ## Deployment
 
