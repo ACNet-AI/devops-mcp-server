@@ -1,2 +1,1 @@
-"""Deployment automation tools for MCP servers"""
-
+"""Deployment automation tools for MCP servers."""

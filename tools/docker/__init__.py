@@ -1,2 +1,1 @@
-"""Docker management tools"""
-
+"""Docker management tools."""
