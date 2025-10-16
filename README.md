@@ -38,7 +38,13 @@ Universal DevOps automation through conversation. Deploy, monitor, and manage ap
 - `get_system_info` - Get system information
 - `list_ports_in_use` - List ports in use
 
-**Total: 15 DevOps tools ready to use!**
+#### MCP Server Deployment (4 tools) 🆕
+- `clone_mcp_server` - Clone MCP server from Git
+- `install_mcp_dependencies` - Install project dependencies
+- `deploy_mcp_server` - Complete deployment workflow
+- `check_mcp_server_health` - Verify server health
+
+**Total: 19 DevOps tools ready to use!**
 
 ## Quick Start
 

@@ -2,6 +2,30 @@
 
 All notable changes to devops-mcp-server will be documented in this file.
 
+## [0.2.0] - 2025-10-13
+
+### 🚀 New Features
+
+#### 🎯 MCP Server Deployment Automation (4 tools)
+- **`clone_mcp_server`** - Clone MCP server repositories from Git
+- **`install_mcp_dependencies`** - Install project dependencies (uv/pip)
+- **`deploy_mcp_server`** - Complete deployment workflow (clone + install + start)
+- **`check_mcp_server_health`** - Verify server is running and healthy
+
+#### 💡 Capabilities
+- Deploy any MCP server with one command
+- Automated dependency installation
+- Docker-compose integration for containerized servers
+- Health monitoring for deployed servers
+- Support for both local and remote deployments
+
+**Total: 19 DevOps tools** (15 existing + 4 new)
+
+### 📚 Documentation
+- Added comprehensive USAGE.md guide
+- Updated README with user onboarding
+- Fixed linter warnings
+
 ## [0.1.0] - 2025-10-13
 
 ### 🎉 Initial Release
