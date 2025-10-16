@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = [ "setuptools>=61.0", "wheel",]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,33 +8,29 @@ version = "1.0.0"
 description = "MCP server: devops-mcp-server"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = [
-    "mcp-factory>=1.6.0",
-    "pydantic>=2.0.0",
-    "pyyaml>=6.0.0"
-]
+dependencies = [ "mcp-factory>=1.6.0", "pydantic>=2.0.0", "pyyaml>=6.0.0",]
 
-
+[project.optional-dependencies]
+dev = [ "pytest>=7.0.0", "pytest-asyncio>=0.21.0", "black>=23.0.0", "ruff>=0.1.0",]
 
 [tool.setuptools]
 py-modules = []
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = []
-
-[project.optional-dependencies]
-dev = [
-    "pytest>=7.0.0",
-    "pytest-asyncio>=0.21.0",
-    "black>=23.0.0",
-    "ruff>=0.1.0"
-]
-
 [tool.black]
 line-length = 88
-target-version = ["py310"]
+target-version = [ "py310",]
 
 [tool.ruff]
 line-length = 88
 target-version = "py310"
+
+[tool.mcp-servers-hub]
+name = "devops-mcp-server"
+description = "MCP server: devops-mcp-server"
+author = "acn"
+github_username = "ACNet-AI"
+categories = [ "tools",]
+
+[tool.setuptools.packages.find]
+where = [ ".",]
+include = []
