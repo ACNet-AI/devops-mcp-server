@@ -112,7 +112,6 @@ def register_components(server):
                 if "components" not in config:
                     config["components"] = {}
 
-                config_updated = False
                 for comp_type, discovered_items in discovered_components.items():
                     existing_items = config["components"].get(comp_type, [])
                     existing_modules = {item.get("module") for item in existing_items}
@@ -121,7 +120,6 @@ def register_components(server):
                     for existing_item in existing_items:
                         if "enabled" not in existing_item:
                             existing_item["enabled"] = True
-                            config_updated = True
 
                     # Only add non-existing components, deduplicate based on module path
                     for discovered_item in discovered_items:
@@ -129,7 +127,6 @@ def register_components(server):
                             # Newly discovered components are enabled by default
                             discovered_item["enabled"] = True
                             existing_items.append(discovered_item)
-                            config_updated = True
 
                     config["components"][comp_type] = existing_items
 
